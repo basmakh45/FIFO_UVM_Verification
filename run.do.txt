@@ -1,0 +1,5 @@
+vlib work
+vlog -sv -f src_files.list
+vsim work.FIFO_top -classdebug -uvmcontrol=all -voptargs=+acc +UVM_VERBOSITY=UVM_LOW
+add wave -r /FIFO_top/fif/*
+run -all
